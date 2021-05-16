@@ -3,28 +3,33 @@
 require_relative "lib/omniauth/sh4/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "omniauth-sh4"
-  spec.version       = Omniauth::Sh4::VERSION
-  spec.authors       = ["\xD0\x91\xD0\xBE\xD0\xB4\xD1\x80\xD1\x8B\xD0\xB9 \xD0\x91\xD0\xBE\xD1\x80\xD0\xBE\xD0\xB4\xD0\xB0\xD1\x87"]
-  spec.email         = ["unitdesign2014@gmail.com"]
+  spec.add_dependency "oauth2",     "~> 1.4"
+  spec.add_dependency "omniauth",   [">= 1.9", "< 3"]
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "https://github.com/dn2000/sh4_oauth"
-  spec.license       = "MIT"
+  spec.add_development_dependency "bundler", "~> 2.0"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  spec.authors       = ["dn2000"]
+  spec.email         = ["unitdesign2014@gmail.com"]
+  spec.description   = "An abstract OAuth2 strategy for OmniAuth."
+  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
+  spec.homepage      = "https://github.com/dn2000/sh4_oauth"
+  spec.license       = "MIT"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/dn2000/sh4_oauth"
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
-
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
+  spec.name          = "omniauth-sh4"
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
   end
+  spec.version       = Omniauth::Sh4::VERSION
+
+  #spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+
+  #spec.metadata["homepage_uri"] = spec.homepage
+  #spec.metadata["source_code_uri"] = "https://github.com/dn2000/sh4_oauth"
+  #spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+
+  # Specify which files should be added to the gem when it is released.
+  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
