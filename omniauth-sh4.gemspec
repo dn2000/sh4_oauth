@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["dn2000"]
   spec.email         = ["unitdesign2014@gmail.com"]
   spec.description   = "An abstract OAuth2 strategy for OmniAuth."
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
+  spec.summary       = "An abstract OAuth2 strategy for OmniAuth."
   spec.homepage      = "https://github.com/dn2000/sh4_oauth"
   spec.license       = "MIT"
 
