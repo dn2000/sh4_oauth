@@ -9,7 +9,7 @@ module OmniAuth
       option :name, "sh4"
 
       option :client_options, {
-        :site => 'https://9128cbca6787.ngrok.io/',
+        :site => Settings.omniauth.provider.sh4.url,
         :authorize_url => '/oauth/authorize',
         :token_url => '/oauth/token'
       }
