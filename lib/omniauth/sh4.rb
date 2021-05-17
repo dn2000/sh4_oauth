@@ -2,6 +2,7 @@
 
 require_relative "sh4/version"
 require 'omniauth-oauth2'
+require 'config'
 
 module OmniAuth
   module Strategies
@@ -9,7 +10,7 @@ module OmniAuth
       option :name, "sh4"
 
       option :client_options, {
-        :site => Settings.omniauth.provider.sh4.url,
+        :site => Settings.omniauth.providers.sh4.url,
         :authorize_url => '/oauth/authorize',
         :token_url => '/oauth/token'
       }
