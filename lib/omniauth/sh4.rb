@@ -10,7 +10,7 @@ module OmniAuth
       option :name, "sh4"
 
       option :client_options, {
-        :site => Settings.omniauth.providers.sh4.url,
+        :site => ENV['SH4_URL'],
         :authorize_url => '/oauth/authorize',
         :token_url => '/oauth/token'
       }
